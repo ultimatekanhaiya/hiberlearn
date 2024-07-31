@@ -1,0 +1,27 @@
+Q. Steps to set up Hibernate Project
+	1.create new maven project -> select : maven-archetype-quickstart
+	2.Create a hibernate.cfg.xml file or go with java based configuration
+	3.your hibernate.cfg.xml should be placed in source folder, if u don't have source folder
+	then: goto ur project -> right click -> select source folder
+	4.hibernate.cfg.xml is a convention to name the config file. We must name config file like this only.
+	5.To get access hibernate specific tags we need to use proper dtd( Document Type Definition) in our config file.
+	6.How to get hibernate.cfg.xml dtd
+	maven depedencies -> hibernate-core.jar ->	org.hibernate -> hibernate-configuration-3.0.dtd
+	7.Use appropriate tags to define different properties in config file.
+	<hibernate-configuration>
+		<session-factory>
+			<property name="abc">xyz</property>
+	8. How to get hibernate-cfg file properties
+	press ctrl+shift+t -> Environment -> AvailableSettings. Here we can all settings.
+	9. Include class which have @Entity annotation in config file under mapping tag.
+	
+Q. SessionFactory is an interface and we can not create object of Interface.Then how below code possible?
+	SessionFactory sessionFactory = configuration.buildSessionFactory();
+	buildsessionFactory also return SessionFactory only.
+	
+Ans. public SessionFactory buildsessionFactory() {	
+		//SessionFcatory sf = new SessionFactoryImpl();	
+		return new SessionFactoryImpl();		
+		}	
+		
+			

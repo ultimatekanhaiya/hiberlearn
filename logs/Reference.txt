@@ -1,0 +1,60 @@
+
+#Reference to find Hibernate Theory
+	1. https://www.geeksforgeeks.org/hibernate-architecture/
+
+#Reference for Log file creation.
+	Help me most : https://www.codejava.net/frameworks/hibernate/how-to-configure-hibernate-logging-with-log4j2
+	1.1 java brains : https://www.youtube.com/watch?v=SWHYrCXIL38
+	1.2 java brains : https://www.youtube.com/watch?v=lGrcZsw-hKQ
+	2. https://www.baeldung.com/java-log4j2-file-and-console
+	3. for spring boot application : https://springframework.guru/log4j-2-configuration-using-properties-file/
+	4. https://www.youtube.com/watch?v=lGrcZsw-hKQ&t=81s (java brains)
+	5. https://www.youtube.com/watch?v=5a65m_8n3q8 (Daily code buffer)
+
+# Refernce for How to added LOB datatype to DB
+	1. https://www.baeldung.com/hibernate-lob
+	2. 
+
+#Reference Hibernate’s “Detached Entity
+	1. https://www.baeldung.com/hibernate-detached-entity-passed-to-persist
+	
+#Refernce How to change maven default jre file.
+	1. https://stackoverflow.com/questions/28509928/java-version-automatically-change-to-java-1-5-after-maven-update/49707989#49707989
+	2.https://mkyong.com/maven/maven-error-invalid-target-release-17/
+	use this code in pom.xml : 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+#Reference: How to get hibernate.cfg.xml dtd
+	maven depedencies -> hibernate-core.jar ->	org.hibernate -> hibernate-configuration-3.0.dtd
+	
+#Reference: How to get hibernate-cfg file properties
+	press ctrl+shift+t -> Environment -> AvailableSettings. Here we can all settings.
+
+#Reference: Issue with using persist() method of Session Interface
+	1. If we want to use persist with any mapping then to save child entity data  we have to use 'Cascade'
+	2. Otherwise it will throw exception -> Cannot add or update a child row: a foreign key constraint fails
+	
+#Reference: How to see uncommitted data into mysql
+	set transaction isolation level read uncommitted;
+	SELECT * FROM tablename;	
+	
+
+#Reference Cascade
+
+#Reference JsonManagedReference/JsonBackreference
+
+	
+	
+	
